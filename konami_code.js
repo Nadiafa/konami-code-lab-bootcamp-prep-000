@@ -15,7 +15,7 @@ let index = 0;
 
 function init(e) {
   // your code here
-  const key = e.key;
+  const key = e.which;
   
   if (key === codes[index]){
     index++;
