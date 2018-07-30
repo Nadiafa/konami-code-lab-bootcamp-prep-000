@@ -10,11 +10,10 @@ const codes = [
   "b",
   "a"
 ];
-
 let index = 0;
-
-function init(e) {
+function init() {
   // your code here
+  let index = 0;
   const key = e.which;
   
   if (key === codes[index]){
@@ -27,3 +26,21 @@ function init(e) {
     index = 0;
   }
 }
+
+
+function init() {
+  let idx = 0
+
+  document.body.addEventListener("keydown", (e) => {
+    const key = e.key
+    
+    idx = (codes[idx] === key) ? ++idx : 0
+    
+    if (idx === codes.length) {
+      window.alert("Hurray!");
+      idx = 0
+    }
+    
+  });
+}
+
